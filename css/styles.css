@@ -676,8 +676,9 @@ button.portfolio:focus {
 }
 
 .project-link:hover,
+.project-link:hover .project-overlay,
 .project-link:focus,
-.overlay {
+.project-link:focus .project-overlay {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
                 0px 4px 4px rgba(0, 0, 0, 0.06), 
                 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -715,11 +716,6 @@ img.project {
     transition: transform 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-}
-
-.project-item:hover .project-overlay,
-.project-link:focus .project-overlay {
-        transform: translatey(0);
 }
 
 .project-overlay > p {
