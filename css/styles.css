@@ -388,7 +388,7 @@ button.hero:hover, button.hero:focus {
 
     background-color: var(--backdrop-overlay-color);
     
-    transition-property: opacity, visibility;
+    transition-property: opacity, visibility, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -397,11 +397,9 @@ button.hero:hover, button.hero:focus {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-
-    transition-property: opacity, visibility;
+    transition-property: opacity, visibility, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .modal {
