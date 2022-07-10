@@ -58,7 +58,17 @@
         <section class="hero-section">
             <div class="container hero">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button hero">Заказать услугу</button>
+                <button type="button" class="button hero" data-modal-open>Заказать услугу</button>
+            </div>
+
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button type="button" class="exit-button" data-modal-close>
+                        <svg class="exit-icon" height="11" width="11">
+                            <use href="./images/symbol-defs.svg#icon-criss-cross" ></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -130,13 +140,25 @@
                 <h2 class="section-title work">Чем мы занимаемся</h2>
                 <ul class="work-list">
                     <li class="item">
-                        <img src="./images/box_1.jpg" alt="Написание кода" width="370" class="work">
+                        <div class="work-thumb">
+                            <img src="./images/box_1.jpg" alt="Написание кода" width="370" class="work">
+                            <p class="work-description">Десктопные приложения</p>                            
+                        </div>
+
                     </li>
                     <li class="item">
-                        <img src="./images/box_2.jpg" alt="Создание дизайна" width="370" class="work">
+                        <div class="work-thumb">
+                            <img src="./images/box_2.jpg" alt="Создание дизайна" width="370" class="work">
+                            <p class="work-description">Мобильные приложения</p>                            
+                        </div>
+
                     </li>
                     <li class="item">
-                        <img src="./images/box_3.jpg" alt="Выбор стиля" width="370" class="work">
+                        <div class="work-thumb">
+                            <img src="./images/box_3.jpg" alt="Выбор стиля" width="370" class="work">
+                            <p class="work-description">Дизайнерские решения</p>                            
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -413,5 +435,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
