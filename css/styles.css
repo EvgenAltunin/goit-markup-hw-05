@@ -83,6 +83,12 @@ body {
     margin-right: auto;
 }
 
+/* Links and buttons animation */
+a {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* Page titles */
 .hiden-title {
@@ -141,6 +147,10 @@ body {
     border-radius: 50%;
     background-color: transparent;
     color: var(--main-icon-color);
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -230,6 +240,8 @@ body {
 .link-current::after {
     content: "";
     position: absolute;
+
+    display: block;
 
     bottom: 0;
     right: 0;
@@ -356,6 +368,10 @@ button.hero {
     background-color: var(--site-accent-color);
     color: var(--white-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button.hero:hover, button.hero:focus {
@@ -370,13 +386,22 @@ button.hero:hover, button.hero:focus {
     width: 100%;
     height: 100%;
 
-    background-color: var(--backdrop-overlay-color)
+    background-color: var(--backdrop-overlay-color);
+    
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal {
@@ -392,6 +417,7 @@ button.hero:hover, button.hero:focus {
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
 }
 
 .exit-button {
@@ -406,11 +432,21 @@ button.hero:hover, button.hero:focus {
     padding: 0;
     
     background-color: var(--main-site-color);
-    fill: var(--black-color);
+    fill: currentColor;
     border: 2px solid var(--button-border-color);
     border-radius: 50%;
-
+    
     cursor: pointer;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exit-button:hover,
+.exit-button:focus {
+    color: var(--white-text-color);
+    background-color: var(--site-accent-color);
 }
 
 
@@ -568,17 +604,17 @@ button.hero:hover, button.hero:focus {
 
 .customer-link {
     display: inline-flex;
-    
     width: 100%;
     height: 100%;
-
     color: var(--main-icon-color);
-
     justify-content: center;
     align-items: center;
-
     border: 1px solid var(--main-icon-color);
     border-radius: 4px;
+    
+    transition-property: border-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-link:hover,
@@ -632,10 +668,11 @@ button.portfolio {
     background-color: var(--button-color);
     color: var(--main-text-color);
     border: none;
+    border-radius: 4px;
 
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition-property: background-color, color, box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button.portfolio:hover, 
@@ -645,7 +682,6 @@ button.portfolio:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
                 0px 1px 2px rgba(0, 0, 0, 0.08), 
                 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
 }
 
 /* Projects list */
@@ -673,6 +709,10 @@ button.portfolio:focus {
 
     height: 100%;
     width: 100%;
+
+    transition-property: box-shadow, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:hover,
@@ -801,7 +841,7 @@ img.project {
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    width: 100%;
+    width: auto;
 
     margin-bottom: 9px;
 }
@@ -812,6 +852,10 @@ img.project {
 
 .footer-contact-link.white {
     color: var(--white-text-color);
+
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact-link:hover, 
